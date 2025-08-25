@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Role {}","map":{"version":3,"mappings":"AAEA,OAAM,MAAOA,IAAI","names":["Role"],"sourceRoot":"","sources":["C:\\Users\\USER\\TP-DevOps\\src\\app\\model\\role.ts"],"sourcesContent":["\r\n\r\nexport class Role {\r\n  id!: number;\r\n  libelle!: string\r\n}"]},"metadata":{},"sourceType":"module","externalDependencies":[]}

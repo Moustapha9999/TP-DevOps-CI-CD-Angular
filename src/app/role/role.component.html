@@ -1,0 +1,35 @@
+<div class="col-md-8 offset-2 mt-5">
+    <div class="card mt-5">
+        <h1 align="center">LISTES DES ROLES</h1>
+        <div class="card-header">Formulaire</div>
+        <div class="card-body">
+             <label for="">Libelle</label>
+            <input type="text" class="form-control" [(ngModel)]="role.libelle" required>
+            <br>
+            <button class="btn btn-success" (click)="addRole()">{{this.role.id !=0 ? 'Modifier' : 'Valider'}}</button>
+        </div>
+    </div>
+    <label for=""><br>Recherche</label>
+    <input type="text" class="form-control" [(ngModel)]="valueSearch">   
+    <table class="table table-bordered mt-5">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Libelle</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of roles | filtreRole:this.valueSearch; index as i" [ngClass]="{orange:i%2===0,vert: i}">
+               
+                <td>{{p.id}}</td>
+                <td>{{p.libelle |uppercase}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteRole(p.id)">Delete</button>
+                    <button class="btn btn-primary" (click)="recharge(p)">Update</button>
+                        </td>
+              
+            </tr>
+        </tbody>
+    </table>
+</div>
