@@ -1,0 +1,21 @@
+version: "3.9"
+name: tp-devops-angular
+
+networks:
+  frontend:
+  - frontend
+  driver: bridge
+
+
+volumes:
+nginx_logs:
+- nginx_logs:/var/log/nginx
+
+
+services:
+web:
+image: docker.io/moustaphasall/tp-devops:latest
+container_name: angular-web
+restart: unless-stopped
+ports:
+- "8080:80"
