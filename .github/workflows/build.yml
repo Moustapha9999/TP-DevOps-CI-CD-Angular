@@ -24,7 +24,7 @@ jobs:
 
       # 3. Build avec Maven
       - name: Build WAR file
-        run: npm run build -- --configuration production
+        run: npm install
 
       # 4. Extraire la version Maven
       - name: Extract project version
